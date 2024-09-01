@@ -140,10 +140,10 @@ p.status("[{}] {} == {}".format(attempts, password.decode('latin-1'), password_h
 
 ```python
 if password_hash == wanted_hash:
-						p.success("Password hash found after {} attempts! {} hashes to {}!".format(attempts, password))
-						exit()
-					attempts += 1
-				p.failure("password hash not found")
+	p.success("Password hash found after {} attempts! {} hashes to {}!".format(attempts, password))
+	exit()
+	attempts += 1
+p.failure("password hash not found")
 ```
 
 * <code>if</code> statement is used for Python to make decisions
@@ -156,7 +156,9 @@ if password_hash == wanted_hash:
 * <code>p.failure(”password hash not found”)</code> uses <code>p.failure</code> from <code>pwn</code> module
 * otherwise, if the loop hasn’t found its match then it will print "password hash not found"
   
-<b> 8. Before testing it out, generate your current password to SHA256 password. For example, my password is ‘kali’ </b>
+<b>8. Before testing it out, generate your current password to SHA256 password </b>
+
+For example, my password is 'kali' and when I generate it to SHA256 I get 'fc5669b52ce4e283ad1d5d182de88ff9faec6672bace84ac2ce4c083f54fe2bc':
 
 ```python
 echo -ne kali | sha256sum
@@ -166,9 +168,9 @@ echo -ne kali | sha256sum
 <b> 9. Pass the SHA256 hash of your current password to the argument </b>
 
 ```python
-python3 sha256.py
+python3 sha256.py fc5669b52ce4e283ad1d5d182de88ff9faec6672bace84ac2ce4c083f54fe2bc
 ```
-* <code>python3 sha256.py (your own generated SHA256 password)</code>
+* <code>python3 sha256.py (your own generated sha256 password) </code>
 
 # Output
 ![Screenshot 2024-09-02 at 1 46 30 AM](https://github.com/user-attachments/assets/8483d565-6d27-467f-9c61-a77a74d3ca8c)
