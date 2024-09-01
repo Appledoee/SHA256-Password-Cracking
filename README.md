@@ -10,7 +10,7 @@ As the project name suggests, our task in this activity is to crack the SHA-256 
 
 A script using ‘sys’ and ‘pwn’ which automates the process of trying many different passwords to see which one matches a given SHA-256 hash.
 
-I will be using a wordlist file less than 10 passwords and including my own password to test the code.
+I am using a wordlist file less than 10 passwords and including my own password to test the code.
 
 # Features
 
